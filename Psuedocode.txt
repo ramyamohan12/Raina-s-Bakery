@@ -1,0 +1,47 @@
+START SHOPPING CART
+RETRIEVE session and cart (or create an empty cart if not found)
+
+IF POST request
+    GET product details (name, size, price)
+    CALCULATE price based on size (small = $20, medium = $30, large = $40)
+    ADD item ("Name - Size - $Price") to cart
+    UPDATE session with cart
+
+DISPLAY all cart items with "Remove" buttons (linked to item index)
+IF user clicks "Remove"
+    DELETE item from cart by index
+    UPDATE session with cart
+
+DISPLAY "Continue Shopping" link to Store.jsp
+END
+
+
+
+START STORE
+LIST products (name, price)
+FOR each product
+    DISPLAY product details with "Add to Cart" button
+    IF product requires size
+        SHOW dropdown for size selection
+
+USE embedded CSS for layout and styling
+END
+
+
+
+
+START OWNERS VIEW
+RETRIEVE session and orders (or show "No orders at the moment" if empty)
+
+DISPLAY orders in a table
+FOR each order in cart
+    SPLIT order into "Product Name" and "Price"
+    SHOW rows with index, name, and price
+
+DISPLAY "Finished Order" button for each item
+IF user clicks "Finished Order"
+    REMOVE order from list
+    UPDATE session with remaining orders
+
+STYLE table (centered with borders)
+END
