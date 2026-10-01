@@ -1,4 +1,4 @@
-# Bakery E-Commerce Web App
+# Raina's Bakery/E-Commerce Web App
 
 A responsive full-stack web application built for a local bakery to manage product displays and customer order inquiries.
 
